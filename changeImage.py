@@ -24,6 +24,10 @@ for file in os.listdir(directory):
         # open the file
         img = Image.open(file_loc + file)
 
-        # rotate image 90 degrees
-        img = img.rotate(90)
+        # resize image
+        newsize = (600, 400)
+        img = img.resize(newsize)
 
+        # save file
+        save_location = './supplier-data/' + file + '.tiff'
+        img.convert('RGB').save(save_location)
