@@ -6,6 +6,7 @@ import time
 import os
 import sys
 import socket
+import emails
 
 
 starttime=time.time()
@@ -38,9 +39,20 @@ while True:
     if s is not '127.0.0.1':
         print('Unresolved localhost')
         # send email
- 
+
 
     time.sleep(2.0 - ((time.time() - starttime) % 2.0))
 
 
-email_body = 'Please check your system and resolve the issue as soon as possible.'
+
+def main():
+    sender = 'automation@example.com'
+    recipient = 'student-01-fb6b4f12e8ed@example.com'
+    subject = 'Upload Completed - Online Fruit Store'
+    body = 'Please check your system and resolve the issue as soon as possible.'
+    attachment_path = '/tmp/processed.pdf'
+    message = emails.generate_email(sender, recipient, subject, body, attachment_path)
+    emails.send_email(message)
+
+if __name__ == "__main__":
+    main()
