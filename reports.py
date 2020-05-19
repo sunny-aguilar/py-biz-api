@@ -63,7 +63,7 @@ def generate_report():
 
 
     # generate report
-    report.build([report_title, paragraph])
+    report.build(report_title, paragraph)
 
 
 
