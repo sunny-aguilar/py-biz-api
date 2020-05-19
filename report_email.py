@@ -41,7 +41,7 @@ def get_title():
     date_str = date_data.strftime('%b %d, %Y')
     # append date to report title
     report_title = 'Processed Update on ' + date_str
-    return date_str
+    return report_title
 
 
 def main():
