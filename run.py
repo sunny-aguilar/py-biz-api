@@ -11,7 +11,7 @@ files = os.listdir(directory)
 # upload URL
 url = 'http://35.225.164.210/fruits'
 
-
+# hold item data
 item_dict = {
     'name': '',
     'weight': 0,
@@ -54,5 +54,5 @@ for file in files:
         # serialize Python object into json notation
         item_json = json.dumps(item_dict)
         print(item_json)
-        # response = requests.post('http://', data = item_json)
+        # response = requests.post('http://xxx/fruits', data = item_json)
 
