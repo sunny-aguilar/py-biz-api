@@ -17,7 +17,7 @@ directory = './supplier-data/images'
 # iterate over files in directory
 for file in os.listdir(directory):
 
-    if not file.endswith('.DS_Store'):
+    if file.endswith('.tiff'):
         # file location and name
         file_loc = './supplier-data/images/'
 
