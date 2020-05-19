@@ -27,22 +27,26 @@ for file in files:
         for line in current_file:
             # remove trailing space and linefeed/carriage returns
             field = line.strip()
+            # print(line)
 
             # add fields to item dictionary
-            if desc == 1:
+            if desc == 0:
+                line = line.strip()
+                item_dict[item_fields[desc]] = line
+            elif desc == 1:
                 # convert weight string to integer
                 line = int(line[0:4].strip())
                 item_dict[item_fields[desc]] = line
-            elif desc == 4:
-                # add image name dict
-                name = file[0:3] + 'jpeg'
-                item_dict[item_fields[desc]] = name
-            else:
+            elif desc == 2:
+                # add description to dict
                 item_dict[item_fields[desc]] = line.strip()
+                # add image name dict
+                name = file[0:3] + '.jpeg'
+                # print(f'File: {name}')
+                item_dict[item_fields[desc]] = name
 
             # go to next item in file
             desc += 1
 
-        # print(line)
         print(item_dict)
 
