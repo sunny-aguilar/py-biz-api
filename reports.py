@@ -38,13 +38,13 @@ def generate_report(attachment, title, paragraph):
     # print(f'{item_name}\n{item_weight}')
 
     # report name
-    report_name = 'processed.pdf'
+    # report_name = 'processed.pdf'
 
     # report save location
     attachment = '/tmp/processed.pdf'
 
     # report object
-    report = SimpleDocTemplate(report_name)
+    report = SimpleDocTemplate(title)
 
     # get styles
     styles = getSampleStyleSheet()
@@ -59,11 +59,11 @@ def generate_report(attachment, title, paragraph):
     title = Paragraph(report_title, styles['h1'])
 
     # create body paragraph
-    data = ''
-    for name, weight in zip(item_name, item_weight):
-        data += '<br/><br/>name: ' + name + "<br/>weight: " + str(weight)
-        print(f'Data: {name}  {weight}')
-    paragraph = Paragraph(data, styles["BodyText"])
+    # data = ''
+    # for name, weight in zip(item_name, item_weight):
+    #     data += '<br/><br/>name: ' + name + "<br/>weight: " + str(weight)
+    #     print(f'Data: {name}  {weight}')
+    paragraph = Paragraph(paragraph, styles["BodyText"])
 
 
     # generate report
