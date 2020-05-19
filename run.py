@@ -55,6 +55,6 @@ for file in files:
         response = requests.post('http://35.192.50.78/fruits/', data = item_dict)
 
         # print status code
-        print(f'Response Code: {response.status_code}   Status Code: {response.ok}')
+        #print(f'Response Code: {response.status_code}   Status Code: {response.ok}')
 
 

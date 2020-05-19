@@ -54,7 +54,7 @@ def main():
 
     # send email info
     sender = 'automation@example.com'
-    recipient = 'student-01-fb6b4f12e8ed@example.com'
+    recipient = 'student-04-acf489fe68fd@example.com'
     subject = 'Upload Completed - Online Fruit Store'
     body = 'All fruits are uploaded to our website successfully. A detailed list is attached to this email.'
     attachment_path = '/tmp/processed.pdf'

@@ -16,11 +16,11 @@ starttime=time.time()
 
 def monitor_system():
     while True:
-        print("tick")
+        #print("tick")
         # report an error if CPU usage is over 80%
         usage = psutil.cpu_percent()
         if usage > 5:
-            print(usage, '% CPU usage')
+            #print(usage, '% CPU usage')
             # send email
             subject = 'Error - CPU usage is over 80%'
             break
@@ -29,7 +29,7 @@ def monitor_system():
         disk_usage = psutil.disk_usage('./')
         free_disk_space = 100 - disk_usage[3]
         if free_disk_space < 20:
-            print(free_disk_space, '%')
+            #print(free_disk_space, '%')
             # send email
             subject = 'Error - Available disk space is less than 20%'
             break
@@ -38,9 +38,9 @@ def monitor_system():
         memory = psutil.virtual_memory()
         mem_avail = memory[1]/1024
         mem_avail = mem_avail/1024
-        print(mem_avail, 'MB free disk space')
+        #print(mem_avail, 'MB free disk space')
         if mem_avail < 500:
-            print(mem_avail, 'MB')
+            #print(mem_avail, 'MB')
             # send email
             subject = 'Error - Available memory is less than 500MB'
             break
@@ -49,7 +49,7 @@ def monitor_system():
         s = socket.gethostbyname(socket.gethostname())
         print(s)
         if s is not '127.0.0.1':
-            print('Unresolved localhost')
+            #print('Unresolved localhost')
             # send email
             subject = 'Error - localhost cannot be resolved to 127.0.0.1'
             break
@@ -64,7 +64,7 @@ def main():
 
     # send email when function above leave loop
     sender = 'automation@example.com'
-    recipient = 'student-01-fb6b4f12e8ed@example.com'
+    recipient = 'student-04-acf489fe68fd@example.com'
     body = 'Please check your system and resolve the issue as soon as possible.'
     attachment_path = 'none'
     message = emails.generate_email(sender, recipient, subject, body, attachment_path)
