@@ -20,7 +20,7 @@ for file in os.listdir(directory):
     if file.endswith('.tiff'):
         # rename file
         new_name = file
-        new_name = new_name[0:3] + 'jpeg'
+        new_name = new_name[0:3] + '.jpeg'
         print(f'File: {file}')
         os.rename(file, new_name)
         print(f'New Name: {file}')
