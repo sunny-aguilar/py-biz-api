@@ -68,7 +68,7 @@ def generate_report():
 
     # generate report
     # report.build([attachment, title, paragraph])
-    report.generate([attachment, title, paragraph])
+    report.build([attachment, title, paragraph])
 
 
 
