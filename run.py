@@ -5,6 +5,7 @@ import requests
 
 # directory of description files
 directory = './supplier-data/descriptions/'
+files = os.listdir(directory)
 
 # upload URL
 http://[linux-instance-external-IP]/fruits
@@ -16,3 +17,9 @@ item_dict = {
     'description': '',
     'image_name': ''
 }
+
+
+# open each text file
+for file in files:
+
+    
