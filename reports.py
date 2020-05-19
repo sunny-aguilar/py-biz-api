@@ -14,8 +14,8 @@ def generate_report():
     directory = './supplier-data/descriptions/'
     files = os.listdir(directory)
 
-    item_name = ''
-    item_weight = 0
+    item_name = []
+    item_weight = []
 
     # open each text file
     for file in files:
@@ -24,15 +24,15 @@ def generate_report():
             for line in current_file:
                 # add fields to item dictionary
                 if desc == 0:
-                    item_name = line.strip()
+                    item_name.append(line.strip())
 
                 elif desc == 1:
                     # convert weight string to integer
-                    item_weight = int(line[0:4].strip())
+                    item_weight.append(int(line[0:4].strip()))
 
                 # go to next item in file
                 desc += 1
-            print(f'Item: {item_name}  {item_weight}')
+            print(f'Item: {item_name}\n{item_weight}')
 
     # report name
     report_name = 'processed.pdf'
@@ -50,6 +50,12 @@ def generate_report():
 
     # add report title
     # report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
+
+    # # add body paragraph/sentences
+    # paragraph = '<br/>name: ' + item_name + "<br/>" + item_weight + "<br/>"
+
+
+
 
 
 def main(argv):
