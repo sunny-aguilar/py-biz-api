@@ -31,9 +31,10 @@ for file in files:
 
             # add fields to item dictionary
             if desc == 1:
+                line = line[-3:0]
+                line = line.strip()
                 item_dict[item_fields[desc]] = line
             else:
-                line = int(line.strip())
                 item_dict[item_fields[desc]] = line
 
             # go to next item in file
