@@ -10,7 +10,7 @@ function push_commit()
     #commit changes
     git commit -am 'client work'
     # push to github
-    git push &
+    git push
 }
 
 
