@@ -52,7 +52,8 @@ def generate_report():
     # print(date_str)
 
     # add report title
-    report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
+    title = 'Processed Update on ' + date_str
+    report_title = Paragraph(title, styles['h1'])
 
     # create body paragraph
     paragraph = ''
