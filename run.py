@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import requests
+import json
 
 
 # directory of description files
@@ -48,5 +49,9 @@ for file in files:
             # go to next item in file
             desc += 1
 
-        print(item_dict)
+        # post each file to site
+        # print(item_dict)
+        # send data to API
+        feedback_jason = json.dumps(feedback)
+        response = requests.post('http://', data = item_jason)
 
