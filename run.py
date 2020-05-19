@@ -33,7 +33,7 @@ for file in files:
                 # convert weight string to integer
                 line = int(line[0:4].strip())
                 item_dict[item_fields[desc]] = line
-            elif desc = 4:
+            elif desc == 4:
                 # add image name dict
                 name = file[0:3] + 'jpeg'
                 item_dict[item_fields[desc]] = name
