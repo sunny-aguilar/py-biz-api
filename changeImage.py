@@ -8,3 +8,8 @@
 #   Author:     Sandro Aguilar
 #   Date:       May 18, 2020
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+import os, sys, PIL
+from PIL import Image
+
+
+
