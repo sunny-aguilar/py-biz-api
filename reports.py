@@ -16,32 +16,11 @@ def generate_report(attachment, title, paragraph):
     # get styles
     styles = getSampleStyleSheet()
 
-    # get date
-    date_data = datetime.datetime.now()
-    date_str = date_data.strftime('%b %d, %Y')
-
     # add report title
-    report_title = 'Processed Update on ' + date_str
-    title = Paragraph(report_title, styles['h1'])
+    title = Paragraph(title, styles['h1'])
 
-    # create body paragraph
-    # data = ''
-    # for name, weight in zip(item_name, item_weight):
-    #     data += '<br/><br/>name: ' + name + "<br/>weight: " + str(weight)
-    #     print(f'Data: {name}  {weight}')
+    # add body paragraph
     paragraph = Paragraph(paragraph, styles["BodyText"])
-
 
     # generate report
     report.build([title, paragraph])
-    # reports.generate_report(attachment, title, paragraph)
-
-
-
-def main():
-    # genereate a report by calling generate_report function
-    generate_report()
-
-
-if __name__ == "__main__":
-    main()
