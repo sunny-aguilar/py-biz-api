@@ -18,16 +18,21 @@ directory = './supplier-data/images'
 for file in os.listdir(directory):
 
     if file.endswith('.tiff'):
+        # rename file
+        new_name = file
+        print(file)
+
+
         # file location and name
         file_loc = './supplier-data/images/'
 
         # open the file
-        img = Image.open(file_loc + file)
+        # img = Image.open(file_loc + file)
 
         # resize image
-        newsize = (600, 400)
-        img = img.resize(newsize)
+        # newsize = (600, 400)
+        # img = img.resize(newsize)
 
         # save file
-        save_location = './supplier-data/images/' + file + '.tiff'
-        img.convert('RGB').save(save_location)
+        # save_location = './supplier-data/images/' + file + '.tiff'
+        # img.convert('RGB').save(save_location)
