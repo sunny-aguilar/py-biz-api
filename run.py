@@ -21,5 +21,4 @@ item_dict = {
 
 # open each text file
 for file in files:
-
-    
+    print(file)
