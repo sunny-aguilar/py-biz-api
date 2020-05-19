@@ -8,7 +8,7 @@ directory = './supplier-data/descriptions/'
 files = os.listdir(directory)
 
 # upload URL
-http://[linux-instance-external-IP]/fruits
+url = 'http://35.225.164.210/fruits'
 
 
 item_dict = {
