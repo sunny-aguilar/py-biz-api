@@ -43,7 +43,7 @@ for file in files:
                 # add image name dict
                 name = file[0:3] + '.jpeg'
                 # print(f'File: {name}')
-                item_dict[item_fields[desc]] = name
+                item_dict[item_fields[desc+1]] = name
 
             # go to next item in file
             desc += 1
