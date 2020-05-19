@@ -9,7 +9,7 @@ directory = './supplier-data/descriptions/'
 files = os.listdir(directory)
 
 # upload URL
-url = 'http://35.225.164.210/fruits'
+url = 'http://35.192.50.78/fruits'
 
 # hold item data
 item_dict = {
@@ -52,9 +52,7 @@ for file in files:
         # post each file to site
 
         # serialize Python object into json notation
-        # item_json = json.dumps(item_dict)
-        # print(item_json)
-        response = requests.post('http://35.222.144.155/fruits/', data = item_dict)
+        response = requests.post('http://35.192.50.78/fruits/', data = item_dict)
 
         # print status code
         print(f'Response Code: {response.status_code}   Status Code: {response.ok}')
