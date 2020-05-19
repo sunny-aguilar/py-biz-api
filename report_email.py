@@ -48,7 +48,7 @@ def get_title():
 def main():
     # generate a report by calling generate_report function
     attachment = '/tmp/processed.pdf'
-    title = get_title
+    title = get_title()
     paragraph = get_paragraph_body()
     reports.generate_report(attachment, title, paragraph)
 
