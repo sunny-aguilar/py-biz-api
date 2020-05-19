@@ -3,6 +3,7 @@ import reportlab
 from reportlab.platypus import SimpleDocTemplate
 from reportlab.platypus import Paragraph, Spacer, Table, Image
 from reportlab.lib.styles import getSampleStyleSheet
+import reports
 import datetime
 import sys
 import os
@@ -51,7 +52,7 @@ def generate_report():
     # print(date_str)
 
     # add report title
-    # report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
+    report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
 
     # create body paragraph
     paragraph = ''
@@ -59,6 +60,8 @@ def generate_report():
         paragraph += '<br/>name: ' + name + "<br/>" + str(weight)
         print(f'Data: {name}  {weight}')
 
+    # generate report
+    reports.generate('', report_title, paragraph)
 
 
 
