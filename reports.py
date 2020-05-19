@@ -66,10 +66,10 @@ def generate_report():
 
 
 
-def main(argv):
+def main():
     # genereate a report by calling generate_report function
     generate_report()
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    main()
