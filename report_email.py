@@ -28,7 +28,6 @@ def get_paragraph_body():
 
                 # go to next item in file
                 desc += 1
-
     # create body paragraph
     data = ''
     for name, weight in zip(item_name, item_weight):
@@ -36,12 +35,19 @@ def get_paragraph_body():
 
     return data
 
+def get_title():
+    # get date
+    date_data = datetime.datetime.now()
+    date_str = date_data.strftime('%b %d, %Y')
+    # append date to report title
+    report_title = 'Processed Update on ' + date_str
+    return date_str
 
 
 def main():
     # genereate a report by calling generate_report function
     attachment = '/tmp/processed.pdf'
-    title = 'processed.pdf'
+    title = get_title
     paragraph = get_paragraph_body()
     reports.generate_report(attachment, title, paragraph)
 
