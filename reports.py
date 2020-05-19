@@ -32,6 +32,8 @@ def generate_report():
 
                 # go to next item in file
                 desc += 1
+
+    # print lists
     print(f'{item_name}\n{item_weight}')
 
     # report name
