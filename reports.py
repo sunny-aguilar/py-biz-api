@@ -5,6 +5,7 @@ from reportlab.platypus import Paragraph, Spacer, Table, Image
 from reportlab.lib.styles import getSampleStyleSheet
 import datetime
 import sys
+import os
 
 
 # generate report
