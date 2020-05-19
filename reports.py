@@ -34,7 +34,7 @@ def generate_report():
                 desc += 1
 
     # print lists
-    print(f'{item_name}\n{item_weight}')
+    # print(f'{item_name}\n{item_weight}')
 
     # report name
     report_name = 'processed.pdf'
@@ -48,13 +48,19 @@ def generate_report():
     # get date
     date_data = datetime.datetime.now()
     date_str = date_data.strftime('%b %d, %Y')
-    print(date_str)
+    # print(date_str)
 
     # add report title
-    # report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
+    report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
 
     # # add body paragraph/sentences
-    # paragraph = '<br/>name: ' + item_name + "<br/>" + item_weight + "<br/>"
+    paragraph = '<br/>name: ' + item_name + "<br/>" + item_weight
+
+    # create body paragraph
+    paragraph = ''
+    for name, weight in zip(item_name, item_weight):
+        paragraph += '<br/>name: ' + item_name + "<br/>" + item_weight
+        print(f'Data: {name}  {weight}')
 
 
 
