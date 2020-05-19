@@ -37,8 +37,3 @@ for file in os.listdir(directory):
         new_name = file
         new_name = new_name[0:3] + 'jpeg'
         os.rename(directory+'/'+file, directory+'/'+new_name)
-
-        # rename file
-        new_name = file
-        new_name = new_name[0:3] + '.jpeg'
-        os.rename(directory+'/'+file, directory+'/'+new_name)
