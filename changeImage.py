@@ -11,5 +11,19 @@
 import os, sys, PIL
 from PIL import Image
 
+# directory to iterate over
+directory = './supplier-data'
 
+# iterate over files in directory
+for file in os.listdir(directory):
+
+    if not file.endswith('.DS_Store'):
+        # file location and name
+        file_loc = './images/'
+
+        # open the file
+        img = Image.open(file_loc + file)
+
+        # rotate image 90 degrees
+        img = img.rotate(90)
 
