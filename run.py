@@ -43,6 +43,6 @@ for file in files:
             # go to next item in file
             desc += 1
 
-            print(line)
-            # print(item_dict)
+            # print(line)
+            print(item_dict)
 
