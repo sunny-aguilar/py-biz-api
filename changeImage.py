@@ -12,7 +12,7 @@ import os, sys, PIL
 from PIL import Image
 
 # directory to iterate over
-directory = './supplier-data'
+directory = './supplier-data/images'
 
 # iterate over files in directory
 for file in os.listdir(directory):
@@ -29,5 +29,5 @@ for file in os.listdir(directory):
         img = img.resize(newsize)
 
         # save file
-        save_location = './supplier-data/' + file + '.tiff'
+        save_location = './supplier-data/images/' + file + '.tiff'
         img.convert('RGB').save(save_location)
