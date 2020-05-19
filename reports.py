@@ -53,13 +53,10 @@ def generate_report():
     # add report title
     # report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
 
-    # # add body paragraph/sentences
-    paragraph = '<br/>name: ' + item_name + "<br/>" + item_weight
-
     # create body paragraph
     paragraph = ''
     for name, weight in zip(item_name, item_weight):
-        paragraph += '<br/>name: ' + item_name + "<br/>" + item_weight
+        paragraph += '<br/>name: ' + item_name + "<br/>" + str(item_weight)
         print(f'Data: {name}  {weight}')
 
 
