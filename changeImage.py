@@ -31,7 +31,7 @@ for file in os.listdir(directory):
 
         # save file
         save_location = './supplier-data/images/' + file
-        img.convert('RGB').save(save_location)
+        img.convert('RGB').save(save_location, 'JPEG')
 
         # rename files
         new_name = file
