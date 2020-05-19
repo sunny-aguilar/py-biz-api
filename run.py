@@ -5,3 +5,8 @@ import requests
 
 # directory of description files
 directory = './supplier-data/descriptions/'
+
+# upload URL
+http://[linux-instance-external-IP]/fruits
+
+
