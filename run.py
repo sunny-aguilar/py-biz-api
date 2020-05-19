@@ -52,7 +52,11 @@ for file in files:
         # post each file to site
 
         # serialize Python object into json notation
-        item_json = json.dumps(item_dict)
-        print(item_json)
-        response = requests.post('http://35.222.144.155/fruits/', json = item_json)
+        # item_json = json.dumps(item_dict)
+        # print(item_json)
+        response = requests.post('http://35.222.144.155/fruits/', data = item_dict)
+
+        # print status code
+        print(f'Response Code: {response.status_code}   Status Code: {response.ok}')
+
 
