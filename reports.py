@@ -61,7 +61,7 @@ def generate_report():
         print(f'Data: {name}  {weight}')
 
     # generate report
-    reports.generate('', report_title, paragraph)
+    report.build('', report_title, paragraph)
 
 
 
