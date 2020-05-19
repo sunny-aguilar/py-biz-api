@@ -15,12 +15,13 @@ subject = ''
 starttime=time.time()
 
 def monitor_system():
+    global subject
     while True:
-        #print("tick")
+        print("tick")
         # report an error if CPU usage is over 80%
         usage = psutil.cpu_percent()
         if usage > 5:
-            #print(usage, '% CPU usage')
+            print(usage, '% CPU usage')
             # send email
             subject = 'Error - CPU usage is over 80%'
             break
@@ -46,13 +47,13 @@ def monitor_system():
             break
 
         # report an error if the host name 'localhost' cannot be resolved to '127.0.0.1'
-        s = socket.gethostbyname(socket.gethostname())
-        print(s)
-        if s is not '127.0.0.1':
-            #print('Unresolved localhost')
-            # send email
-            subject = 'Error - localhost cannot be resolved to 127.0.0.1'
-            break
+        # s = socket.gethostbyname(socket.gethostname())
+        # print(s)
+        # if s is not '127.0.0.1':
+        #     #print('Unresolved localhost')
+        #     # send email
+        #     subject = 'Error - localhost cannot be resolved to 127.0.0.1'
+        #     break
 
         # monitor every 60 seconds
         time.sleep(2.0 - ((time.time() - starttime) % 2.0))
@@ -67,8 +68,9 @@ def main():
     recipient = 'student-04-acf489fe68fd@example.com'
     body = 'Please check your system and resolve the issue as soon as possible.'
     attachment_path = 'none'
-    message = emails.generate_email(sender, recipient, subject, body, attachment_path)
-    emails.send_email(message)
+    print('SUBJECT: ', subject)
+    # message = emails.generate_email(sender, recipient, subject, body, attachment_path)
+    # emails.send_email(message)
 
 if __name__ == "__main__":
     main()
