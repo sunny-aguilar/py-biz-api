@@ -18,14 +18,23 @@ item_dict = {
     'image_name': ''
 }
 
+item_fields = ['name', 'weight', 'description', 'image_name']
 
 # open each text file
 for file in files:
     with open(directory+file, 'r+') as current_file:
+        desc = 0
         for line in current_file:
             # remove trailing space and linefeed/carriage returns
             field = line.strip()
             print(field)
 
-            # add field to item dictionary
+            # add fields to item dictionary
+            if desc == 1:
+                item_dict[item_fields[desc]] = line
+            else:
+                line = int(line.strip())
+                item_dict[item_fields[desc]] = line
 
+            # go to next item in file
+            desc += 1
