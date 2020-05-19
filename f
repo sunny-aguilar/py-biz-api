@@ -8,7 +8,7 @@
 function push_commit()
 {
     #commit changes
-    git commit -am 'email'
+    git commit -am 'client work'
     # push to github
     git push
 }
@@ -17,7 +17,7 @@ function push_commit()
 function commit()
 {
     # commt changes only
-    git commit -am 'email client'
+    git commit -am 'client work'
 }
 
 # what to run
@@ -32,14 +32,14 @@ elif [ "$1" == 'commit' ]; then
 
 elif [ "$1" == 'run' ]; then
     # run Python script
-    python3 email_template.py $2 $3
+    python3 changeImage.py $2 $3
     exit 0
 
 elif [ "$1" == 'runs' ]; then
     # push
     push_commit
     # run Python script
-    python3 email_template.py $2 $3
+    python3 changeImage.py $2 $3
     exit 0
 
 fi
