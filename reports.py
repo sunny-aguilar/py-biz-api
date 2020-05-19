@@ -11,7 +11,7 @@ import os
 # generate report
 def generate_report(attachment, title, paragraph):
     # report object
-    report = SimpleDocTemplate(title)
+    report = SimpleDocTemplate(attachment)
 
     # get styles
     styles = getSampleStyleSheet()
