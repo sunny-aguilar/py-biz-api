@@ -31,16 +31,3 @@ def send_email(message):
     mail_server = smtplib.SMTP('localhost')
     mail_server.send_message(message)
     mail_server.quit()
-
-def main():
-    sender = 'automation@example.com'
-    recipient = 'student-01-fb6b4f12e8ed@example.com'
-    subject = 'Upload Completed - Online Fruit Store'
-    body = 'All fruits are uploaded to our website successfully. A detailed list is attached to this email.'
-    attachment_path = '/tmp/processed.pdf'
-
-    generate_email(sender, recipient, subject, body, attachment_path)
-    send_email()
-
-if __name__ == "__main__":
-    main()

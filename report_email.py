@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import reports
+import emails
 import datetime
 import sys
 import os
@@ -45,11 +46,20 @@ def get_title():
 
 
 def main():
-    # genereate a report by calling generate_report function
+    # generate a report by calling generate_report function
     attachment = '/tmp/processed.pdf'
     title = get_title
     paragraph = get_paragraph_body()
     reports.generate_report(attachment, title, paragraph)
+
+    # send email info
+    sender = 'automation@example.com'
+    recipient = 'student-01-fb6b4f12e8ed@example.com'
+    subject = 'Upload Completed - Online Fruit Store'
+    body = 'All fruits are uploaded to our website successfully. A detailed list is attached to this email.'
+    attachment_path = '/tmp/processed.pdf'
+    emails.generate_email(sender, recipient, subject, body, attachment_path)
+    emails.send_email()
 
 
 if __name__ == "__main__":
