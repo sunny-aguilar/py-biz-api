@@ -21,6 +21,7 @@ for file in os.listdir(directory):
         # rename file
         new_name = file
         new_name = new_name[0:3] + '.jpeg'
+        print('CWD: ', os.getcwd())
         print(f'File: {file}')
         os.rename(file, new_name)
         print(f'New Name: {file}')
