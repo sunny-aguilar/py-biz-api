@@ -22,7 +22,7 @@ for file in os.listdir(directory):
         new_name = file
         new_name = new_name[0:3] + '.jpeg'
         print(f'File: {file}')
-        os.rename('/supplier-data/images/'+file, '/supplier-data/images/'+new_name)
+        os.rename(file, new_name)
         print(f'New Name: {file}')
 
         # file location and name
