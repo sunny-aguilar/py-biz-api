@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# from reportlab.platypus import SimpleDocTemplate
-# from reportlab.platypus import Paragraph, Spacer, Table, Image
-# from reportlab.lib.styles import getSampleStyleSheet
-# from reportlab.lib import colors
+from reportlab.platypus import SimpleDocTemplate
+from reportlab.platypus import Paragraph, Spacer, Table, Image
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib import colors
 import reports
 import datetime
 import sys
@@ -67,8 +67,8 @@ def generate_report():
 
 
     # generate report
-    # report.build([attachment, title, paragraph])
-    reports.generate(attachment, title, paragraph)
+    # report.build([title, paragraph])
+    reports.generate_report(attachment, title, paragraph)
 
 
 
