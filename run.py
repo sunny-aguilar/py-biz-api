@@ -21,8 +21,11 @@ item_dict = {
 
 # open each text file
 for file in files:
-    with open('data/feedback/'+file, 'r+') as current_file:
+    with open(directory+file, 'r+') as current_file:
         for line in current_file:
-            print(line)
             # remove trailing space and linefeed/carriage returns
-            # field = line.strip()
+            field = line.strip()
+            print(field)
+
+            # add field to item dictionary
+
