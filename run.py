@@ -52,6 +52,7 @@ for file in files:
         # post each file to site
 
         # serialize Python object into json notation
-        item_jason = json.dumps(item_dict)
-        response = requests.post('http://', data = item_jason)
+        item_json = json.dumps(item_dict)
+        print(item_json)
+        # response = requests.post('http://', data = item_json)
 
