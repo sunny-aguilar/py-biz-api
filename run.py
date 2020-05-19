@@ -54,5 +54,5 @@ for file in files:
         # serialize Python object into json notation
         item_json = json.dumps(item_dict)
         print(item_json)
-        # response = requests.post('http://xxx/fruits', data = item_json)
+        response = requests.post('http://35.222.144.155/fruits/', json = item_json)
 
