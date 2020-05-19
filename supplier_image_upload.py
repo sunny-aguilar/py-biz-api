@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import requests, os
 
-
+# upload location
 url = "http://localhost/upload/"
 
 with open('/supplier-data/images', 'rb') as opened:
