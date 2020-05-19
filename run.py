@@ -32,7 +32,7 @@ for file in files:
             # add fields to item dictionary
             if desc == 1:
                 line = line[0:4]
-                line = line.strip()
+                line = int(line.strip())
                 print(f'Line: {line}')
                 item_dict[item_fields[desc]] = line
             else:
