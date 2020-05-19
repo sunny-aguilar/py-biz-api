@@ -10,3 +10,9 @@ directory = './supplier-data/descriptions/'
 http://[linux-instance-external-IP]/fruits
 
 
+item_dict = {
+    'name': '',
+    'weight': 0,
+    'description': '',
+    'image_name': ''
+}
