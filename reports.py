@@ -10,7 +10,7 @@ import os
 
 
 # generate report
-def generate_report():
+def generate_report(attachment, title, paragraph):
     # directory of description files
     directory = './supplier-data/descriptions/'
     files = os.listdir(directory)
@@ -67,8 +67,8 @@ def generate_report():
 
 
     # generate report
-    # report.build([title, paragraph])
-    reports.generate_report(attachment, title, paragraph)
+    report.build([title, paragraph])
+    # reports.generate_report(attachment, title, paragraph)
 
 
 
