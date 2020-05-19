@@ -19,7 +19,7 @@ for file in os.listdir(directory):
 
     if not file.endswith('.DS_Store'):
         # file location and name
-        file_loc = './images/'
+        file_loc = './supplier-data/images/'
 
         # open the file
         img = Image.open(file_loc + file)
