@@ -56,14 +56,15 @@ def generate_report():
     report_title = Paragraph(title, styles['h1'])
 
     # create body paragraph
-    paragraph = ''
+    data = ''
     for name, weight in zip(item_name, item_weight):
-        paragraph += '<br/>name: ' + name + "<br/>" + str(weight)
+        data += '<br/>name: ' + name + "<br/>" + str(weight)
         print(f'Data: {name}  {weight}')
+    paragraph = Paragraph(data, styles["BodyText"])
 
 
     # generate report
-    report.build(report_title, paragraph)
+    report.build([report_title, paragraph])
 
 
 
