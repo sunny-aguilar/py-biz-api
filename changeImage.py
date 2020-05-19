@@ -20,7 +20,7 @@ for file in os.listdir(directory):
     if file.endswith('.tiff'):
         # rename file
         new_name = file
-        print(file)
+        print(f'File: {file}')
 
 
         # file location and name
@@ -34,5 +34,5 @@ for file in os.listdir(directory):
         # img = img.resize(newsize)
 
         # save file
-        # save_location = './supplier-data/images/' + file + '.tiff'
+        # save_location = './supplier-data/images/' + file + '.jpeg'
         # img.convert('RGB').save(save_location)
