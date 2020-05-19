@@ -38,14 +38,7 @@ for file in os.listdir(directory):
         new_name = new_name[0:3] + 'jpeg'
         os.rename(directory+'/'+file, directory+'/'+new_name)
 
-
-# iterate over files in directory
-# for file in os.listdir(directory):
-
-#     if file.endswith('.tiff'):
-#         # rename file
-#         new_name = file
-#         print(f'File: {file}')
-#         new_name = new_name[0:3] + '.jpeg'
-#         print(f'New Name: {file}')
-#         os.rename(directory+'/'+file, directory+'/'+new_name)
+        # rename file
+        new_name = file
+        new_name = new_name[0:3] + '.jpeg'
+        os.rename(directory+'/'+file, directory+'/'+new_name)
