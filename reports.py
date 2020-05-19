@@ -32,7 +32,7 @@ def generate_report():
 
                 # go to next item in file
                 desc += 1
-
+            print(f'Item: {item_name}  {item_weight}')
 
     # report name
     report_name = 'processed.pdf'
