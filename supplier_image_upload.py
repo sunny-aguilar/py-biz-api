@@ -4,18 +4,13 @@ import requests, os
 # upload location
 url = "http://localhost/upload/"
 
-with open('/supplier-data/images', 'rb') as opened:
-    if opened.endswith('.jpeg'):
-        r = requests.post(url, files={'file': opened})
 
-
-# directory to iterate over
-directory = './supplier-data/images'
+# directory of jpeg images
+directory = './supplier-data/images/'
 
 # iterate over files in directory
 for file in os.listdir(directory):
-    # if file.endswith('.jpeg'):
-    #     r = requests.post(url, files={'file': file})
+    # open and upload each image
     with open('./supplier-data/images/'+file, 'rb') as opened:
         if file.endswith('.jpeg'):
             r = requests.post(url, files={'file': opened})
