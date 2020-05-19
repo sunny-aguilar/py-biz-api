@@ -50,8 +50,8 @@ for file in files:
             desc += 1
 
         # post each file to site
-        # print(item_dict)
-        # send data to API
-        feedback_jason = json.dumps(feedback)
+
+        # serialize Python object into json notation
+        item_jason = json.dumps(item_dict)
         response = requests.post('http://', data = item_jason)
 
