@@ -60,10 +60,10 @@ def generate_report():
     for name, weight in zip(item_name, item_weight):
         paragraph += '<br/>name: ' + name + "<br/>" + str(weight)
         print(f'Data: {name}  {weight}')
-    print(paragraph)
+
 
     # generate report
-    report.build('', report_title, paragraph)
+    report.build(['', report_title, paragraph])
 
 
 
