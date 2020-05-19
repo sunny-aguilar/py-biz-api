@@ -49,7 +49,7 @@ def generate_report():
     print(date_str)
 
     # add report title
-    report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
+    # report_title = Paragraph('Processed Update on ', date_str, styles['h1'])
 
 
 def main(argv):
