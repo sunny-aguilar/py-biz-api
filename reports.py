@@ -40,6 +40,9 @@ def generate_report():
     # report name
     report_name = 'processed.pdf'
 
+    # report save location
+    attachment = '/tmp/processed.pdf'
+
     # report object
     report = SimpleDocTemplate(report_name)
 
@@ -52,8 +55,8 @@ def generate_report():
     # print(date_str)
 
     # add report title
-    title = 'Processed Update on ' + date_str
-    report_title = Paragraph(title, styles['h1'])
+    report_title = 'Processed Update on ' + date_str
+    title = Paragraph(report_title, styles['h1'])
 
     # create body paragraph
     data = ''
@@ -64,8 +67,8 @@ def generate_report():
 
 
     # generate report
-    report.build([report_title, paragraph])
-
+    # report.build([title, paragraph])
+    reports.generate_report(attachment, title, paragraph)
 
 
 
