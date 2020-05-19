@@ -27,16 +27,16 @@ for file in files:
         for line in current_file:
             # remove trailing space and linefeed/carriage returns
             field = line.strip()
-            print(field)
 
             # add fields to item dictionary
             if desc == 1:
                 line = int(line[0:4].strip())
                 item_dict[item_fields[desc]] = line
             else:
-                item_dict[item_fields[desc]] = line
+                item_dict[item_fields[desc]] = line.strip()
 
             # go to next item in file
             desc += 1
 
-print(item_dict)
+            print(item_dict)
+
