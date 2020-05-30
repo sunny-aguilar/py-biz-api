@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Author:       Sand
+# Author:       Sandr
 # Date:
 # Project:
 #
