@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Author:       Sandro Aguilar
-# Date:         May 12, 202
-# Project:
+# Date:         May 12, 2020
+# Project:      C
 #
 #
 #
