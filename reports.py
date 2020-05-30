@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Author:       Sandro Ag
+# Author:       Sandro Agu
 # Date:
 # Project:
 #
