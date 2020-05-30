@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Author:       Sandro Aguilar
-# Date:         May 12,
+# Date:         May 12, 
 # Project:
 #
 #
