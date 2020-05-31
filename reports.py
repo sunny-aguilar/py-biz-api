@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Author:       Sandro Aguilar
 # Date:         May 12, 2020
-# Project:      Courser
+# Project:      Coursera
 #
 #
 #
